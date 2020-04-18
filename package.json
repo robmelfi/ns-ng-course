@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.nsngcourse",
+    "id": "it.robertomelfi.nsngcourse",
     "tns-android": {
       "version": "6.5.0"
     },
