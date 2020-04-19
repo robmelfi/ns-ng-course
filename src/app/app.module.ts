@@ -9,6 +9,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { StackComponent } from './layouts/stack/stack.component';
 import { FlexboxComponent } from './layouts/flexbox/flexbox.component';
 import { GridComponent } from './layouts/grid/grid.component';
+import { ChallengeEditComponent } from './challenges/challenge-edit/challenge-edit.component';
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -25,7 +26,8 @@ import { GridComponent } from './layouts/grid/grid.component';
         CurrentChallengeComponent,
         StackComponent,
         FlexboxComponent,
-        GridComponent
+        GridComponent,
+        ChallengeEditComponent
     ],
     providers: [],
     schemas: [

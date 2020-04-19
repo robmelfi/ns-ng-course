@@ -4,4 +4,10 @@ import { Component } from "@angular/core";
     selector: "ns-app",
     templateUrl: "./app.component.html"
 })
-export class AppComponent { }
+export class AppComponent {
+    enteredChallenge = ''
+
+    onChallangeInput(challengeDescription: string) {
+        this.enteredChallenge = challengeDescription;
+    }
+}
