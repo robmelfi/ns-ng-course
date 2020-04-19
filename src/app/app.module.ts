@@ -9,6 +9,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ChallengeEditComponent } from './challenges/challenge-edit/challenge-edit.component';
 import { AuthComponent } from './auth/auth.component';
 import { TodayComponent } from './challenges/today/today.component';
+import { AppRoutingModule } from "./app-routing.module";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -18,7 +19,7 @@ import { TodayComponent } from './challenges/today/today.component';
         AppComponent
     ],
     imports: [
-        NativeScriptModule, NativeScriptFormsModule
+        NativeScriptModule, NativeScriptFormsModule, AppRoutingModule
     ],
     declarations: [
         AppComponent,
