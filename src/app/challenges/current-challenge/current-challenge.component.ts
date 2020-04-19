@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     selector: 'ns-current-challenge',
@@ -6,4 +7,10 @@ import { Component } from "@angular/core";
     styleUrls: ['./current-challenge.component.css'],
     moduleId: module.id
 })
-export class CurrentChallengeComponent {}
+export class CurrentChallengeComponent {
+    constructor(private router: RouterExtensions) {}
+
+    onEdit() {
+        this.router.navigate(['/challenge-edit'])
+    }
+}
