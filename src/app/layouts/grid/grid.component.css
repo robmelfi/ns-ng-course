@@ -1,0 +1,23 @@
+/* Add mobile styles for the component here.  */
+/* Add mobile styles for the component here.  */
+GridLayout {
+    border-color: green;
+    border-width: 5;
+    height: 300;
+}
+
+Label {
+    text-align: center;
+    color: white;
+    font-size: 25;
+}
+
+#i1 {
+    background-color: red;
+}
+#i2 {
+    background-color: blue;
+}
+#i3 {
+    background-color: orange;
+}
