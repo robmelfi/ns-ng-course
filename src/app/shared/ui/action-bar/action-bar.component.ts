@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { isAndroid } from "tns-core-modules/platform";
 import { Page } from "tns-core-modules/ui/page/page";
 import { RouterExtensions } from 'nativescript-angular/router';
-import { I18nPluralPipe } from '@angular/common';
 
 declare var android: any;
 
@@ -19,6 +18,10 @@ export class ActionBarComponent implements OnInit {
   constructor(private page: Page, private router: RouterExtensions) { }
 
   ngOnInit(): void {
+  }
+
+  get android() {
+      return isAndroid
   }
 
   get canGoBack() {
