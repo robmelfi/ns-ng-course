@@ -42,4 +42,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     onChallangeInput(challengeDescription: string) {
         this.activeChallenge = challengeDescription;
     }
+
+    onLogout() {
+        this.uiService.toggleDrawer();
+    }
 }
