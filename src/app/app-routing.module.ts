@@ -9,13 +9,18 @@ import { ChallengeTabsComponent } from "./challenges/challenge-tabs/challenge-ta
 
 const routes: Routes = [
     { path: '', component: AuthComponent },
-    { path: 'challenge-edit', component: ChallengeEditComponent },
     {
         path: 'challenges',
-        component: ChallengeTabsComponent,
         children: [
-            { path: 'today', component: TodayComponent, outlet: 'today' },
-            { path: 'current-challenge', component: CurrentChallengeComponent,  outlet: 'currentChallenge'}
+            {
+                path: 'tabs',  component: ChallengeTabsComponent,
+                children: [
+                    { path: 'today', component: TodayComponent, outlet: 'today' },
+                    { path: 'current-challenge', component: CurrentChallengeComponent,  outlet: 'currentChallenge'}
+                ]
+            },
+            { path: ':mode', component: ChallengeEditComponent },
+            { path: '', redirectTo: '/challenges/tabs', pathMatch: 'full'}
         ]
     }
 ];
