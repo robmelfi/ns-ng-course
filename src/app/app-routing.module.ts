@@ -9,7 +9,7 @@ const routes: Routes = [
     },
     {
         path: 'challenges',
-        loadChildren: '~/app/challenges/challenges.module#ChallengesModule'
+        loadChildren: () => import("./challenges/challenges.module").then(m => m.ChallengesModule)
     }
 ];
 

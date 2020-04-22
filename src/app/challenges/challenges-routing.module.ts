@@ -13,7 +13,7 @@ const routes: Routes = [
             { path: 'current-challenge', component: CurrentChallengeComponent,  outlet: 'currentChallenge'}
         ]
     },
-    { path: ':mode', loadChildren: '~/app/challenges/challenge-edit/challenge.module#ChallengeEditModule' },
+    { path: ':mode', loadChildren: () => import("./challenge-edit/challenge-edit.module").then(m => m.ChallengeEditModule) },
     { path: '', redirectTo: '/challenges/tabs', pathMatch: 'full'}
 ]
 
