@@ -8,6 +8,11 @@ $btn-color: $primary;
 
 @import '~nativescript-theme-core/scss/index';
 
+ActionBar {
+  background: $primary;
+  color: white;
+}
+
 // .form-control {
 //    border-bottom-color: #7c015d;
 //    border-bottom-width: 2;
