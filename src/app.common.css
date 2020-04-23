@@ -1,5 +1,4 @@
-@import "~@nativescript/theme/css/core.css";
-@import "~@nativescript/theme/css/default.css";
+@import '~nativescript-theme-core/css/core.light.css';
 
 .form-control {
    border-bottom-color: #7c015d;
@@ -23,8 +22,5 @@
   border-radius: 30%;
   margin: 5 0;
   border-color: #7c015d;
-  border-bottom-width: 1;
-  border-top-width: 1;
-  border-left-width: 1;
-  border-right-width: 1;
+  border-width: 1;
 }
