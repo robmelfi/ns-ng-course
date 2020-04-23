@@ -1,4 +1,4 @@
-@import '~nativescript-theme-core/css/core.light.css';
+@import '~nativescript-theme-core/css/orange.css';
 
 .form-control {
    border-bottom-color: #7c015d;
@@ -16,11 +16,11 @@
    padding: 20;
 }
 
-.btn {
+/* .btn {
   width: 100%;
   padding: 5 10;
   border-radius: 30%;
   margin: 5 0;
   border-color: #7c015d;
   border-width: 1;
-}
+} */
