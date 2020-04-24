@@ -10,6 +10,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular/side-drawer-directives';
 import { DayModalComponent } from './challenges/day-modal/day-modal.component'
 import { SharedModule } from "./shared/ui/action-bar/shared.module";
+import { ChallengeActionsModule } from "./challenges/challenge-actions/challenge-actions.module";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -23,7 +24,8 @@ import { SharedModule } from "./shared/ui/action-bar/shared.module";
         NativeScriptFormsModule,
         NativeScriptUISideDrawerModule,
         AppRoutingModule,
-        SharedModule
+        SharedModule,
+        ChallengeActionsModule
     ],
     declarations: [
         AppComponent,

@@ -42,6 +42,7 @@
         class="day"
         [row]="getRow(i, day)"
         [col]="day.dayInWeek"
+        (tap)="onChangeStatus()"
       >
         <Label [text]="day.dayInMonth"></Label>
       </FlexboxLayout>
