@@ -19,15 +19,10 @@
         </Label>
     </ActionItem>
 </ns-action-bar>
-<StackLayout>
-    <Label
-        class="title"
-        text="The current challenge"
-        horizontalAlignment="center">
-    </Label>
-    <Button
-        text="Change Status"
-        class="btn"
-        (tap)="onChangeStatus()"
-    ></Button>
-</StackLayout>
+<FlexboxLayout class="page">
+  <Label class="h1 text-center" text="Take a walk every day"></Label>
+  <Label
+    class="body text-center"
+    text="Walk for at least 20 minutes on every of the week."
+  ></Label>
+</FlexboxLayout>
