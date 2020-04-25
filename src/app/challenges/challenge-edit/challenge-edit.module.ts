@@ -4,11 +4,13 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 import { ChallengeEditComponent } from "./challenge-edit.component";
 import { SharedModule } from "~/app/shared/ui/action-bar/shared.module";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 @NgModule({
     declarations: [ChallengeEditComponent],
     imports: [
         NativeScriptCommonModule,
+        NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forChild([
             { path: '', component: ChallengeEditComponent }
