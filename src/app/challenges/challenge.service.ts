@@ -34,6 +34,7 @@ export class ChallengeService {
             );
             challenge.days[dayIndex].status = status;
             this._currentChallenge.next(challenge);
+            console.log(challenge.days[dayIndex]);
             // Save this to a server
         });
     }
