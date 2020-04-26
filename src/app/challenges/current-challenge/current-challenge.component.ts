@@ -10,8 +10,7 @@ import { ChallengeService } from "../challenge.service";
 	selector: 'ns-current-challenge',
 	templateUrl: './current-challenge.component.html',
 	styleUrls: [
-		'./_current-challenge.component.common.scss',
-		'./current-challenge.component.scss',
+		'./_current-challenge.component.common.scss'
 	],
 	moduleId: module.id
 })

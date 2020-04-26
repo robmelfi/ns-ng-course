@@ -36,10 +36,10 @@
       ></Button>
     </StackLayout>
     <StackLayout *ngIf="currentChallenge">
-      <Label class="h1 text-center" text="Take a walk every day"></Label>
+      <Label class="h1 text-center" [text]="currentChallenge.title"></Label>
       <Label
         class="body text-center"
-        text="Walk for at least 20 minutes on every of the week."
+        [text]="currentChallenge.description"
       ></Label>
     </StackLayout>
     <GridLayout
@@ -55,7 +55,7 @@
         [col]="i"
       ></Label>
       <FlexboxLayout
-        *ngFor="let day of days; let i = index"
+        *ngFor="let day of currentChallenge.days; let i = index"
         class="day"
         [row]="getRow(i, day)"
         [col]="day.dayInWeek"
