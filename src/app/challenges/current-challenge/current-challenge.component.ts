@@ -25,19 +25,6 @@ export class CurrentChallengeComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-		this.currentYear = new Date().getFullYear();
-		this.currentMonth = new Date().getMonth();
-		const daysInMonth = new Date(
-			this.currentYear,
-			this.currentMonth + 1,
-			0
-		).getDate();
-
-		for (let i = 1; i < daysInMonth + 1; i++) {
-			const date = new Date(this.currentYear, this.currentMonth, i);
-			const dayInWeek = date.getDay();
-			this.days.push({ dayInMonth: i, dayInWeek: dayInWeek });
-		}
 	}
 
 	getRow(index: number, day: { dayInMonth: number; dayInWeek: number }) {
