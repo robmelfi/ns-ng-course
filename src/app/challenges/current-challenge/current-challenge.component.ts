@@ -2,6 +2,9 @@ import { Component, ViewContainerRef, OnInit } from "@angular/core";
 import { ModalDialogService } from 'nativescript-angular/modal-dialog';
 import { DayModalComponent } from "../day-modal/day-modal.component";
 import { UIService } from "~/app/shared/ui/ui.service";
+import { Challenge } from "../challenge.model";
+import { Subscription } from "rxjs";
+import { ChallengeService } from "../challenge.service";
 
 @Component({
 	selector: 'ns-current-challenge',
@@ -14,25 +17,30 @@ import { UIService } from "~/app/shared/ui/ui.service";
 })
 export class CurrentChallengeComponent implements OnInit {
 	weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-	days: { dayInMonth: number; dayInWeek: number }[] = [];
-	private currentMonth: number;
-	private currentYear: number;
+	currentChallenge: Challenge;
+	private curChallengeSub: Subscription;
 
 	constructor(
 		private modalDialog: ModalDialogService,
 		private vcRef: ViewContainerRef,
-		private uiService: UIService
+		private uiService: UIService,
+		private challengeService: ChallengeService
 	) { }
 
 	ngOnInit(): void {
+		this.curChallengeSub = this.challengeService.currentChallenge.subscribe(
+			challenge => {
+				this.currentChallenge = challenge;
+			}
+		);
 	}
 
 	getRow(index: number, day: { dayInMonth: number; dayInWeek: number }) {
 		const startRow = 1;
 		const weekRow = Math.floor(index / 7);
 		const firstWeekDayOfMonth = new Date(
-			this.currentYear,
-			this.currentMonth,
+			new Date().getFullYear(),
+			new Date().getMonth(),
 			1
 		).getDay();
 		const irregularRow = day.dayInWeek < firstWeekDayOfMonth ? 1 : 0;
@@ -50,5 +58,11 @@ export class CurrentChallengeComponent implements OnInit {
 		}).then((action: string) => {
 			console.log(action);
 		});
+	}
+
+	ngOnDestroy() {
+		if (this.curChallengeSub) {
+			this.curChallengeSub.unsubscribe();
+		}
 	}
 }
