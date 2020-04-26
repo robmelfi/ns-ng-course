@@ -11,6 +11,7 @@ export class ChallengeActionsComponent implements OnInit {
   @Input() cancelText = 'Cancel';
   action: 'complete' | 'fail' = null;
 
+
   constructor() { }
 
   ngOnInit(): void {
