@@ -1,7 +1,7 @@
 <ns-action-bar
-    title="Login"
-    [showBackButton]="false"
-    [hasMenu]="false">
+  [title]="isLogin ? 'Login' : 'Signup'"
+  [showBackButton]="false"
+  [hasMenu]="false">
 </ns-action-bar>
 <StackLayout class="form" [formGroup]="form">
   <StackLayout class="input-field">
@@ -47,7 +47,12 @@
     ></Label>
   </StackLayout>
   <Button
-    text="Login"
+    class="btn btn-flat"
+    [text]="isLogin ? 'Signup instead' : 'Login instead'"
+    (tap)="onSwitch()"
+  ></Button>
+  <Button
+    [text]="isLogin ? 'Login' : 'Signup'"
     class="btn btn-primary btn-rounded-lg"
     (tap)="onSubmit()"
   ></Button>
